@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
-import { View, Text, Image } from 'react-native';
-import { Avatar, Card, ListItem, Button, Icon } from 'react-native-elements';
-import Context from '../../Context';
+import React from 'react';
+import { View, Text } from 'react-native';
+import { Avatar, Card, Button, Icon } from 'react-native-elements';
 
 const Profile = () => {
   return (

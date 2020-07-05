@@ -1,8 +1,8 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input, Text, Button } from 'react-native-elements';
-
+import customStyles from '../../config/styles';
 const LOGIN_ENTITIES = {
   USERMAME: 'username',
   PASSWORD: 'password'
@@ -33,7 +33,7 @@ const Login = ({ updateContext, navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text h4>Set your credentiasls</Text>
+      <Text h4>Set your credentials</Text>
       <Input
         placeholder={LOGIN_ENTITIES.USERMAME}
         leftIcon={<Icon name="user" size={14} />}
@@ -56,13 +56,7 @@ const Login = ({ updateContext, navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20%'
-  }
+  ...customStyles
 });
 
 export default Login;

@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet, Alert } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { Button, Avatar } from 'react-native-elements';
+import customStyles from '../../config/styles';
 
 const Home = ({ navigation }) => {
   return (
@@ -13,7 +14,7 @@ const Home = ({ navigation }) => {
         type="outline"
       />
       <Button
-        onPress={() => navigation.navigate('Login')}
+        onPress={() => navigation.navigate('Register')}
         title="I don't have an account"
         type="clear"
       />
@@ -22,12 +23,7 @@ const Home = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
+  ...customStyles,
   baseText: {
     fontWeight: 'bold'
   },
